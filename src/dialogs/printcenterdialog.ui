@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrintCenterDialog</class>
+ <widget class="QDialog" name="PrintCenterDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>打印/导出</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QHBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+        <item>
+         <!-- 左侧预览区 -->
+         <widget class="QWidget" name="leftPanel" native="true">
+          <property name="minimumSize">
+                <size>
+                 <width>400</width>
+                 <height>0</height>
+                </size>
+          </property>
+          <property name="styleSheet">
+                <string notr="true">QWidget#leftPanel { background-color: #f5f5f5; }</string>
+          </property>
+          <layout class="QVBoxLayout" name="leftPanelLayout">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>15</number>
+                </property>
+                <property name="topMargin">
+                 <number>15</number>
+                </property>
+                <property name="rightMargin">
+                 <number>15</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>15</number>
+                </property>
+                <item>
+                 <!-- 预览画布容器 -->
+                 <widget class="QWidget" name="previewContainer" native="true">
+                  <layout class="QVBoxLayout" name="previewContainerLayout">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <!-- 预览工具栏 -->
+                         <widget class="QWidget" name="previewToolbarWidget" native="true">
+                          <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>40</height>
+                                </size>
+                          </property>
+                          <layout class="QHBoxLayout" name="previewToolbarLayout">
+                                <item>
+                                 <spacer name="toolbarLeftSpacer">
+                                  <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                  </property>
+                                  <property name="sizeHint" stdset="0">
+                                        <size>
+                                         <width>40</width>
+                                         <height>20</height>
+                                        </size>
+                                  </property>
+                                 </spacer>
+                                </item>
+                                <item>
+                                 <widget class="QToolButton" name="btnFitView">
+                                  <property name="toolTip">
+                                        <string>适应画布</string>
+                                  </property>
+                                  <property name="text">
+                                        <string>⊡</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QToolButton" name="btnZoomOut">
+                                  <property name="toolTip">
+                                        <string>缩小</string>
+                                  </property>
+                                  <property name="text">
+                                        <string>−</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QToolButton" name="btnZoomIn">
+                                  <property name="toolTip">
+                                        <string>放大</string>
+                                  </property>
+                                  <property name="text">
+                                        <string>+</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <!-- 预览画布 -->
+                         <widget class="QGraphicsView" name="previewView">
+                          <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                          </property>
+                          <property name="frameShape">
+                                <enum>QFrame::Box</enum>
+                          </property>
+                          <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                          </property>
+                          <property name="styleSheet">
+                                <string notr="true">background-color: white; border: 1px solid #ddd;</string>
+                          </property>
+                          <property name="dragMode">
+                                <enum>QGraphicsView::ScrollHandDrag</enum>
+                          </property>
+                         </widget>
+                        </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <!-- 状态信息栏 -->
+                 <widget class="QWidget" name="infoPanel" native="true">
+                  <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>30</height>
+                        </size>
+                  </property>
+                  <layout class="QHBoxLayout" name="infoPanelLayout">
+                        <property name="leftMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>5</number>
+                        </property>
+                        <item>
+                         <widget class="QLabel" name="labelSize">
+                          <property name="text">
+                                <string>尺寸: 40mm × 35mm</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="infoSpacer">
+                          <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="labelCopyCount">
+                          <property name="text">
+                                <string>份数: 1</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="previewStatusSpacer">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>20</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="labelPreviewStatus">
+                          <property name="minimumSize">
+                           <size>
+                            <width>120</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <!-- 批量分页器 (仅批量模式显示) -->
+                 <widget class="QWidget" name="batchNavigator" native="true">
+                  <property name="visible">
+                        <bool>false</bool>
+                  </property>
+                  <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>50</height>
+                        </size>
+                  </property>
+                  <layout class="QHBoxLayout" name="batchNavigatorLayout">
+                        <item>
+                         <widget class="QToolButton" name="btnPrevBatch">
+                          <property name="text">
+                                <string>&lt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="btnBatch1">
+                          <property name="text">
+                                <string>1</string>
+                          </property>
+                          <property name="checkable">
+                                <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="btnBatch2">
+                          <property name="text">
+                                <string>2</string>
+                          </property>
+                          <property name="checkable">
+                                <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="btnBatch3">
+                          <property name="text">
+                                <string>3</string>
+                          </property>
+                          <property name="checkable">
+                                <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="labelEllipsis">
+                          <property name="text">
+                                <string>...</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="batchSpacer">
+                          <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QToolButton" name="btnNextBatch">
+                          <property name="text">
+                                <string>&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <!-- 页面分页器 (仅多页输出时显示) -->
+                 <widget class="QWidget" name="pageNavigator" native="true">
+                  <property name="visible">
+                        <bool>false</bool>
+                  </property>
+                  <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>40</height>
+                        </size>
+                  </property>
+                  <layout class="QHBoxLayout" name="pageNavigatorLayout">
+                        <item>
+                         <widget class="QLabel" name="labelGoTo">
+                          <property name="text">
+                                <string>前往</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="pageInput">
+                          <property name="maximumSize">
+                                <size>
+                                 <width>60</width>
+                                 <height>16777215</height>
+                                </size>
+                          </property>
+                          <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="labelPage">
+                          <property name="text">
+                                <string>页</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="pageSpacer">
+                          <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                          </property>
+                         </spacer>
+                        </item>
+                  </layout>
+                 </widget>
+                </item>
+          </layout>
+         </widget>
+        </item>
+   <item>
+    <!-- 右侧设置区 -->
+    <widget class="QWidget" name="rightPanel" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>500</width>
+       <height>0</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="rightPanelLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="titleLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>导出设置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <!-- 文件类型和纸张 -->
+       <layout class="QFormLayout" name="fileTypeLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::ExpandingFieldsGrow</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelFileType">
+          <property name="text">
+           <string>文件类型:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboFileType">
+          <item>
+           <property name="text">
+            <string>PDF</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>PNG</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>JPEG</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelPageSize">
+          <property name="text">
+           <string>尺寸/纸张:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboPageSize">
+          <item>
+           <property name="text">
+            <string>原尺寸</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>A4 (210×297mm)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>A5 (148×210mm)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Letter (216×279mm)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <!-- 导出方式 -->
+       <layout class="QFormLayout" name="exportModeLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelExportMode">
+          <property name="text">
+           <string>导出方式:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboExportMode">
+          <item>
+           <property name="text">
+            <string>合并导出</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>分别导出</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>自动排版</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <!-- 导出/打印范围 (仅批量模式) -->
+       <widget class="QWidget" name="rangeWidget" native="true">
+        <property name="visible">
+         <bool>false</bool>
+        </property>
+        <layout class="QFormLayout" name="rangeLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelRange">
+           <property name="text">
+            <string>导出/打印范围:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="rangeInputLayout">
+           <item>
+            <widget class="QSpinBox" name="spinRangeStart">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelRangeSeparator">
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinRangeEnd">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <!-- 导出份数 -->
+       <layout class="QFormLayout" name="copyCountLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelCopies">
+          <property name="text">
+           <string>导出份数:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="spinCopies">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <!-- 次要操作按钮 -->
+       <layout class="QHBoxLayout" name="secondaryActionsLayout">
+        <item>
+         <widget class="QPushButton" name="btnLayoutExport">
+          <property name="text">
+           <string>排版导出</string>
+          </property>
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: white; border: 2px solid #4CAF50; color: #4CAF50; padding: 8px; }
+QPushButton:hover { background-color: #f0f0f0; }
+QPushButton:disabled { color: #ccc; border-color: #ccc; }</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnPrintDirect">
+          <property name="text">
+           <string>打印作品</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: white; border: 2px solid #2196F3; color: #2196F3; padding: 8px; }
+QPushButton:hover { background-color: #f0f0f0; }</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <!-- 主要操作按钮 -->
+       <widget class="QPushButton" name="btnDownload">
+        <property name="text">
+         <string>导出作品</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: #4CAF50; color: white; padding: 10px; font-size: 14px; font-weight: bold; border-radius: 4px; }
+QPushButton:hover { background-color: #45a049; }
+QPushButton:pressed { background-color: #3d8b40; }</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file>select.svg</file>
+    <file>qrcode.svg</file>
+    <file>barcode.svg</file>
+    <file>image.svg</file>
+    <file>line.svg</file>
+    <file>rectangle.svg</file>
+    <file>circle.svg</file>
+    <file>print-export.svg</file>
+    <file>app-icon.svg</file>
+    <file>assets.svg</file>
+    <file>arrow.svg</file>
+    <file>star.svg</file>
+    <file>polygon.svg</file>
+    <file>table.svg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,186 @@
+cmake_minimum_required(VERSION 3.20)
+project(SimpleLabel)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+# Use MSVC version of Qt instead of MinGW
+set(CMAKE_PREFIX_PATH "D:/develop/qt/6.8.2/msvc2022_64") # For MSVC compiler
+
+# Add /permissive- flag for MSVC to ensure strict C++ compliance
+if(MSVC)
+    add_compile_options(/permissive-)
+endif()
+
+find_package(Qt6 COMPONENTS
+    Core
+    Gui
+    Widgets
+    PrintSupport
+    Sql
+    REQUIRED)
+
+if (NOT DEFINED QT_VERSION_MAJOR)
+    set(QT_VERSION_MAJOR 6)
+endif()
+
+add_subdirectory(third_party/QXlsx/QXlsx)
+
+# ZXing配置选项（可选）
+set(ZXING_READERS ON CACHE BOOL "Enable readers" FORCE)
+set(ZXING_WRITERS ON CACHE BOOL "Enable writers" FORCE)
+set(ZXING_EXAMPLES OFF CACHE BOOL "Build examples" FORCE)
+set(ZXING_TESTS OFF CACHE BOOL "Build tests" FORCE)
+# 强制ZXing使用C++17以避免MinGW兼容性问题
+set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ standard" FORCE)
+add_subdirectory(third_party/zxing-cpp)
+
+# 添加QR-Code-generator库的源文件
+set(QR_CODE_SOURCES
+        third_party/QR-Code-generator/cpp/qrcodegen.cpp
+        third_party/QR-Code-generator/cpp/qrcodegen.hpp
+)
+
+add_executable(SimpleLabel
+    src/main.cpp
+        src/mainwindow.cpp
+        src/mainwindow.h
+    icons/icons.qrc
+    src/dialogs/assetbrowserdialog.cpp
+    src/dialogs/assetbrowserdialog.h
+    src/dialogs/layoutexportdialog.cpp
+    src/dialogs/layoutexportdialog.h
+    src/panels/labelpropswidget.cpp
+    src/panels/labelpropswidget.h
+    src/panels/databaseprintwidget.cpp
+    src/panels/databaseprintwidget.h
+        src/graphics/labelscene.cpp
+        src/graphics/labelscene.h
+        src/graphics/ruler.cpp
+        src/graphics/ruler.h        src/graphics/qrcodeitem.cpp
+        src/graphics/qrcodeitem.h
+        src/graphics/alignableitem.cpp
+        src/graphics/alignableitem.h
+    src/graphics/selectionframe.cpp
+    src/graphics/selectionframe.h
+        src/graphics/textitem.cpp
+        src/graphics/textitem.h
+        src/graphics/imageitem.cpp
+        src/graphics/imageitem.h
+        src/graphics/inlinetexteditor.cpp
+        src/graphics/inlinetexteditor.h
+        src/graphics/abstractshapeitem.cpp
+        src/graphics/abstractshapeitem.h
+        src/graphics/lineitem.cpp
+        src/graphics/lineitem.h
+        src/graphics/rectangleitem.cpp
+        src/graphics/rectangleitem.h
+        src/graphics/circleitem.cpp
+        src/graphics/circleitem.h
+        src/graphics/tableitem.cpp
+        src/graphics/tableitem.h
+        src/graphics/staritem.cpp
+        src/graphics/staritem.h
+        src/graphics/arrowitem.cpp
+        src/graphics/arrowitem.h
+        src/graphics/polygonitem.cpp
+        src/graphics/polygonitem.h
+        src/dialogs/templatecenterdialog.cpp
+        src/dialogs/templatecenterdialog.h
+        src/dialogs/printcenterdialog.cpp
+        src/dialogs/printcenterdialog.h
+        src/dialogs/printcenterdialog.ui
+        ${QR_CODE_SOURCES}
+        src/core/labelelement.cpp
+        src/core/labelelement.h
+        src/core/qrcodeelement.cpp
+        src/core/qrcodeelement.h
+        src/core/barcodeelement.cpp
+        src/core/barcodeelement.h
+        src/core/textelement.cpp
+        src/core/textelement.h
+        src/core/imageelement.cpp
+        src/core/imageelement.h
+    src/core/tableelement.cpp
+    src/core/tableelement.h
+    src/core/shapeelement.cpp
+    src/core/shapeelement.h
+    src/core/lineelement.cpp
+    src/core/lineelement.h
+    src/core/rectangleelement.cpp
+    src/core/rectangleelement.h
+    src/core/circleelement.cpp
+    src/core/circleelement.h
+        src/core/starelement.cpp
+        src/core/starelement.h
+        src/core/arrowelement.cpp
+        src/core/arrowelement.h
+        src/core/polygonelement.cpp
+        src/core/polygonelement.h
+        src/core/datasource.cpp
+        src/core/datasource.h
+        src/core/batchdatasource.cpp
+        src/core/batchdatasource.h
+        src/core/tabledatasource.cpp
+        src/core/tabledatasource.h
+        src/core/mysqldatasource.cpp
+        src/core/mysqldatasource.h
+    src/printing/printcontext.h
+    src/printing/printengine.cpp
+    src/printing/printengine.h
+    src/printing/printrenderer.h
+    src/printing/defaultprintrenderer.cpp
+    src/printing/defaultprintrenderer.h
+    src/printing/batchprintmanager.cpp
+    src/printing/batchprintmanager.h
+        src/commands/undocommands.cpp
+        src/commands/undocommands.h
+        src/commands/undomanager.cpp
+        src/commands/undomanager.h
+    src/graphics/barcodeitem.cpp
+    src/graphics/barcodeitem.h
+    icons/appicon.rc)
+target_link_libraries(SimpleLabel
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets
+        Qt::PrintSupport
+    Qt::Sql
+        ZXing::ZXing
+        QXlsx::QXlsx
+)
+
+target_compile_definitions(SimpleLabel PRIVATE HAVE_QXLSX)
+
+# 取消 WIN32 子系统以便显示控制台窗口进行调试。
+
+if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(DEBUG_SUFFIX)
+    if (MSVC AND CMAKE_BUILD_TYPE MATCHES "Debug")
+        set(DEBUG_SUFFIX "d")
+    endif ()
+    set(QT_INSTALL_PATH "${CMAKE_PREFIX_PATH}")
+    if (NOT EXISTS "${QT_INSTALL_PATH}/bin")
+        set(QT_INSTALL_PATH "${QT_INSTALL_PATH}/..")
+        if (NOT EXISTS "${QT_INSTALL_PATH}/bin")
+            set(QT_INSTALL_PATH "${QT_INSTALL_PATH}/..")
+        endif ()
+    endif ()
+    if (EXISTS "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll")
+        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E make_directory
+                "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
+        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy
+                "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll"
+                "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
+    endif ()
+    foreach (QT_LIB Core Gui Widgets)
+        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy
+                "${QT_INSTALL_PATH}/bin/Qt6${QT_LIB}${DEBUG_SUFFIX}.dll"
+                "$<TARGET_FILE_DIR:${PROJECT_NAME}>")
+    endforeach (QT_LIB)
+endif ()

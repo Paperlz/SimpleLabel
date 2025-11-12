@@ -1,0 +1,50 @@
+# General ignores
+build/
+build-*/
+cmake-build-*/
+out/
+.vs/
+.vscode/
+.idea/
+*.user
+*.pro.user
+*.sln
+*.vcxproj*
+*.ninja
+CMakeFiles/
+CMakeCache.txt
+*.ilk
+*.pdb
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.exp
+*.log
+*.cache
+*.tmp
+*.qrc.depends
+*_autogen/
+Makefile
+
+# Qt / moc / qmake leftovers
+moc_*
+ui_*
+qrc_*
+
+# Packaging / deployment outputs
+Release/
+Debug/
+dist/
+*.dSYM/
+*.app/
+*.pkg/
+
+# Python cache (tools scripts)
+__pycache__/
+*.pyc
+
+# OS-specific
+.DS_Store
+Thumbs.db

@@ -1,0 +1,444 @@
+ *	 *
+ - %1	- %1
+ 10mm × 20mm (小标签)	10mm × 20mm (Small Label)
+ 30mm × 50mm (中标签)	30mm × 50mm (Medium Label)
+ 50mm × 70mm (大标签)	50mm × 70mm (Large Label)
+ 70mm × 100mm (特大标签)	70mm × 100mm (Extra Large Label)
+ A	A
+ Ctrl+P	Ctrl+P
+ Ctrl+Q	Ctrl+Q
+ Ctrl+R	Ctrl+R
+ Ctrl+Shift+[	Ctrl+Shift+[
+ Ctrl+Shift+]	Ctrl+Shift+]
+ Ctrl+[	Ctrl+[
+ Ctrl+]	Ctrl+]
+ Excel 导入	Excel Import
+ Excel 文件 (*.xlsx *.xls)	Excel Files (*.xlsx *.xls)
+ Excel 文件不存在: %1	Excel file not found: %1
+ JPEG图片 (*.jpg *.jpeg)	JPEG Images (*.jpg *.jpeg)
+ MySQL 数据库	MySQL Database
+ MySQL 数据源	MySQL Data Source
+ No Image	No Image
+ PDF 文件 (*.pdf)	PDF Files (*.pdf)
+ PNG图片 (*.png)	PNG Images (*.png)
+ Sheet	Sheet
+ Sheet1	Sheet1
+ SimpleLabel	SimpleLabel
+ SimpleLabel - %1	SimpleLabel - %1
+ SimpleLabel - 未命名	SimpleLabel - Untitled
+ 一行一个值，或使用下方的分隔符拆分	One value per line, or split using the separators below
+ 上传文件...	Upload File...
+ 上移一层	Bring Forward
+ 上边距:	Top Margin:
+ 下移一层	Send Backward
+ 下边距:	Bottom Margin:
+ 主工具栏	Main Toolbar
+ 主机	Host
+ 二维码	QR Code
+ 人员证	Staff Badge
+ 从文件加载图像	Load Image from File
+ 仓储物流	Warehouse Logistics
+ 以下模板删除失败：\n%1	Failed to delete the following templates:\n%1
+ 份数: %1	Copies: %1
+ 位置: (0, 0)	Position: (0, 0)
+ 例如 localhost	e.g. localhost
+ 保存(&S)	&Save
+ 保存排版文件	Save Layout File
+ 保存文件	Save File
+ 保存标签文件	Save Label File
+ 保持圆形	Keep Circle
+ 保持宽高比	Keep Aspect Ratio
+ 修改二维码数据	Edit QR Code Data
+ 修改圆角半径	Edit Corner Radius
+ 修改文本	Edit Text
+ 修改条形码数据	Edit Barcode Data
+ 修改线条样式	Edit Stroke Style
+ 值	Value
+ 元素类型 %1 不支持数据源应用	Element type %1 does not support data source application
+ 元素类型 %1 暂不支持数据源预览	Element type %1 does not yet support data source preview
+ 全部	All
+ 内容:	Content:
+ 内容预览	Content Preview
+ 分类:	Category:
+ 分隔符	Delimiter
+ 切换线条虚线/实线样式	Toggle between dashed and solid lines
+ 列	Column
+ 列数:	Columns:
+ 创建	Create
+ 创建一个指定尺寸的空白标签	Create a blank label with specified size
+ 删除	Delete
+ 删除二维码	Delete QR Code
+ 删除图形项	Delete Graphic Item
+ 删除文本	Delete Text
+ 删除条形码	Delete Barcode
+ 删除模板	Delete Template
+ 删除表格列分隔线	Remove Table Column Divider
+ 删除表格行分隔线	Remove Table Row Divider
+ 删除该列分隔线	Remove This Column Divider
+ 删除该行分隔线	Remove This Row Divider
+ 删除选中模板	Delete Selected Template
+ 刷新	Refresh
+ 刷新表	Refresh Table
+ 剪切	Cut
+ 剪切(&T)	Cu&t
+ 剪切图形项	Cut Graphic Item
+ 剪切圆形	Cut Circle
+ 剪切多边形	Cut Polygon
+ 剪切星形	Cut Star
+ 剪切矩形	Cut Rectangle
+ 剪切箭头	Cut Arrow
+ 剪切线条	Cut Line
+ 加载图像...	Load Image...
+ 加载预览	Load Preview
+ 取消	Cancel
+ 另存为(&A)...	Save &As...
+ 可选 WHERE 条件，例如 status = 1	Optional WHERE clause, e.g. status = 1
+ 右对齐	Align Right
+ 右边距:	Right Margin:
+ 合格证	Certificate
+ 启用填充	Enable Fill
+ 启用对齐	Enable Alignment
+ 启用数据源	Enable Data Source
+ 启用边框	Enable Border
+ 回车	Enter
+ 图像	Image
+ 图像文件 (*.png *.jpg *.jpeg *.gif *.bmp *.svg)	Image Files (*.png *.jpg *.jpeg *.gif *.bmp *.svg)
+ 图像设置	Image Settings
+ 图形	Shapes
+ 图形项(&T)	&Graphics
+ 圆形	Circle
+ 圆角半径:	Corner Radius:
+ 在此列中间插入分隔线	Insert Divider in This Column
+ 在此行中间插入分隔线	Insert Divider in This Row
+ 垂直间距:	Vertical Spacing:
+ 基础	Basic
+ 填充颜色	Fill Color
+ 填充颜色:	Fill Color:
+ 复制	Copy
+ 复制(&C)	&Copy
+ 多个数据源的记录数不一致	Record counts differ across data sources
+ 多边形	Polygon
+ 大小:	Size:
+ 大小: %1 × %2 mm	Size: %1 × %2 mm
+ 大小: 100 × 75 mm	Size: 100 × 75 mm
+ 字体:	Font:
+ 字距:	Letter Spacing:
+ 完成	Done
+ 宽度:	Width:
+ 密码	Password
+ 对象(&O)	&Object
+ 对齐:	Alignment:
+ 导入模板…	Import Templates...
+ 导出失败	Export Failed
+ 小票	Receipt
+ 尚未选择文件	No file selected
+ 尺寸: %1mm × %2mm	Size: %1mm × %2mm
+ 尺寸: --	Size: --
+ 居中	Center
+ 居中对齐	Align Center
+ 属性面板	Properties Panel
+ 左对齐	Align Left
+ 左边距:	Left Margin:
+ 已分别导出 %1 个 PDF 文件至目录:\n%2	Exported %1 PDF files to:\n%2
+ 已导出 %1 个图像文件至目录:\n%2	Exported %1 image files to:\n%2
+ 已导出 %1 份到 %2 图像，保存于:\n%3	Exported %1 copies to %2 images stored at:\n%3
+ 已导出 %1 份到 PDF:\n%2	Exported %1 copies to PDF:\n%2
+ 已导出包含 %1 条记录的 PDF:\n%2	Exported PDF with %1 records to:\n%2
+ 帮助(&H)	&Help
+ 常规	General
+ 序号	Index
+ 应用	Apply
+ 应用到当前元素	Apply to Current Element
+ 应用第 %1 条数据到元素时失败	Failed to apply record %1 to the element
+ 应用第 %1 条数据失败	Failed to apply record %1
+ 当前会话未配置批量导出	Batch export is not configured for this session
+ 当前数据源无效，请重新配置。	Current data source is invalid. Please reconfigure.
+ 当前数据源没有可用记录	Current data source has no available records
+ 当前没有内容用于排版导出	Nothing to export for layout
+ 当前选择的不是文本元素。	The current selection is not a text element.
+ 当前选择的不是条码或二维码元素。	The current selection is not a barcode or QR code element.
+ 我的模板	My Templates
+ 打印	Print
+ 打印/导出	Print/Export
+ 打印/导出(&P)	&Print/Export
+ 打印上下文缺少源场景	Print context is missing a source scene
+ 打印失败	Print Failed
+ 打印引擎尚未配置渲染器	Print engine has no renderer configured
+ 打印引擎尚未配置渲染器或打印机	Print engine has no renderer or printer configured
+ 打印渲染器未配置	Print renderer is not configured
+ 打开(&O)	&Open
+ 打开标签文件	Open Label File
+ 打开模板文件夹	Open Template Folder
+ 打开素材文件夹	Open Asset Folder
+ 批量导入	Batch Import
+ 批量打印缺少打印引擎实例	Batch printing requires a print engine instance
+ 批量打印过程中发生未知错误	An unknown error occurred during batch printing
+ 批量打印需要有效的打印机实例	Batch printing requires a valid printer
+ 拆分表格列	Split Table Column
+ 拆分表格行	Split Table Row
+ 排序方式	Sort Order
+ 排版导出	Layout Export
+ 排版导出完成: %1	Layout export finished: %1
+ 插入(&I)	&Insert
+ 搜索:	Search:
+ 搜索模板...	Search Templates...
+ 搜索素材…	Search Assets...
+ 撤销(&U)	&Undo
+ 数据库	Database
+ 数据库名称	Database Name
+ 数据库批量打印	Database Batch Print
+ 数据源	Data Source
+ 数据源不包含可用记录	Data source contains no usable records
+ 数据源无效	Data source is invalid
+ 数据源无效或未正确配置	Data source is invalid or misconfigured
+ 数据源无效或未配置	Data source is invalid or not configured
+ 数据源记录数不一致，无法批量打印	Data source record counts mismatch; cannot batch print
+ 数据源错误	Data source error
+ 数据表	Data Table
+ 文件	File
+ 文件(&F)	&File
+ 文件已保存到:\n%1	File saved to:\n%1
+ 文件类型:	File Type:
+ 文字	Text
+ 文本	Text
+ 文本工具栏	Text Toolbar
+ 文本数据源已更新	Text data source updated
+ 文本设置	Text Settings
+ 文本颜色	Text Color
+ 文本颜色:	Text Color:
+ 斜体	Italic
+ 新建(&N)	&New
+ 新建标签	New Label
+ 新建空白	New Blank Label
+ 旋转90°	Rotate 90°
+ 无效的打印区域	Invalid print area
+ 无法写入文件 %1	Cannot write file %1
+ 无法写入文件 %1:\n%2.	Cannot write file %1:\n%2.
+ 无法创建新的打印页	Unable to create new print page
+ 无法创建预览画布	Unable to create preview canvas
+ 无法加载图像文件	Unable to load image file
+ 无法启动打印任务	Unable to start print job
+ 无法在打印机上初始化绘制	Unable to initialize drawing on the printer
+ 无法在打印机上开始绘制	Unable to start drawing on the printer
+ 无法应用数据源记录	Unable to apply data source record
+ 无法生成PDF文件	Unable to generate PDF file
+ 无法生成图像文件	Unable to generate image file
+ 无法生成预览	Unable to generate preview
+ 无法读取文件 %1:\n%2.	Cannot read file %1:\n%2.
+ 无表头	No Header
+ 星形	Star
+ 显示文本	Show Text
+ 显示背景	Show Background
+ 显示边框	Show Border
+ 暂无可预览内容	Nothing to preview
+ 暂无自定义模板	No custom templates
+ 更换图像...	Replace Image...
+ 最后一行	Last Row
+ 服饰	Apparel
+ 未命名	Untitled
+ 未命名标签	Untitled Label
+ 未能解析出有效数据	Failed to parse valid data
+ 未能读取 Excel 数据	Failed to read Excel data
+ 未能读取 MySQL 数据	Failed to read MySQL data
+ 条形码	Barcode
+ 条码数据源已更新	Barcode data source updated
+ 标签名称:	Label Name:
+ 标签尺寸	Label Size
+ 标签属性	Label Properties
+ 标签文件 (*.lbl)	Label Files (*.lbl)
+ 标签文件 (*.lbl);;所有文件 (*)	Label Files (*.lbl);;All Files (*)
+ 样式:	Style:
+ 横向	Landscape
+ 横向排序	Sort Horizontally
+ 正在打印第 %1 条记录	Printing record %1
+ 正在生成预览…	Generating preview...
+ 水平间距:	Horizontal Spacing:
+ 没有可导出的元素	No elements available for export
+ 没有可打印的元素	No elements available for printing
+ 没有可打印的内容	Nothing to print
+ 测试连接	Test Connection
+ 添加二维码	Add QR Code
+ 添加到画布	Add to Canvas
+ 添加图像	Add Image
+ 添加图形	Add Shape
+ 添加图形项	Add Graphic Item
+ 添加圆形	Add Circle
+ 添加多边形	Add Polygon
+ 添加文本	Add Text
+ 添加星形	Add Star
+ 添加条形码	Add Barcode
+ 添加直线	Add Line
+ 添加矩形	Add Rectangle
+ 添加箭头	Add Arrow
+ 用户名	Username
+ 电商	E-commerce
+ 电子产品	Electronics
+ 直线	Line
+ 矩形	Rectangle
+ 码类设置	Code Settings
+ 确定要删除模板“%1”吗？此操作不可恢复。	Delete template "%1"? This cannot be undone.
+ 确定要删除选中的 %1 个模板吗？此操作不可恢复。\n\n%2	Delete the selected %1 templates? This cannot be undone.\n\n%2
+ 移动图形项	Move Graphic Item
+ 移动多个图形项	Move Multiple Graphic Items
+ 移动多边形顶点	Move Polygon Vertex
+ 空格	Space
+ 窗口(&W)	&Window
+ 立即导出	Export Now
+ 竖向排序	Sort Vertically
+ 端口	Port
+ 第%1行	Row %1
+ 第1行	Row 1
+ 筛选条件	Filter Condition
+ 箭头	Arrow
+ 类型:	Type:
+ 粗体	Bold
+ 粗斜体	Bold Italic
+ 粘贴	Paste
+ 粘贴(&P)	&Paste
+ 粘贴二维码	Paste QR Code
+ 粘贴图像	Paste Image
+ 粘贴图形项	Paste Graphic Item
+ 粘贴圆形	Paste Circle
+ 粘贴多边形	Paste Polygon
+ 粘贴文本	Paste Text
+ 粘贴星形	Paste Star
+ 粘贴条形码	Paste Barcode
+ 粘贴直线	Paste Line
+ 粘贴矩形	Paste Rectangle
+ 粘贴箭头	Paste Arrow
+ 粘贴线条	Paste Stroke
+ 精选	Featured
+ 素材(&M)	&Assets
+ 素材库	Asset Library
+ 线条宽度:	Line Width:
+ 线条样式:	Line Style:
+ 线条角度:	Line Angle:
+ 线条颜色	Line Color
+ 线条颜色:	Line Color:
+ 结束行	Ending Row
+ 绘图工具栏	Drawing Toolbar
+ 绘图设置	Drawing Settings
+ 编辑(&E)	&Edit
+ 缩放: %1%	Zoom: %1%
+ 缩放: 100%	Zoom: 100%
+ 缩放多边形	Scale Polygon
+ 缺少可导出的内容	No content available for export
+ 缺少可用的打印场景	No printable scene available
+ 网格配置	Grid Setup
+ 置于底层	Send to Back
+ 置于顶层	Bring to Front
+ 背景	Background
+ 背景颜色	Background Color
+ 背景颜色:	Background Color:
+ 自动换行	Wrap Text
+ 自动调整大小	Auto Resize
+ 自动排版	Auto Layout
+ 自定义	Custom
+ 自定义尺寸	Custom Size
+ 自定义尺寸:	Custom Size:
+ 虚线	Dashed
+ 行 数据	Row Data
+ 行数:	Rows:
+ 表头	Header
+ 表格	Table
+ 裁剪/收缩使选中对象完全落入标签区域	Crop/Shrink selected items to fit inside the label area
+ 规格化	Normalize
+ 规格化完成	Normalization Complete
+ 规格化选中对象	Normalize Selected Items
+ 视图(&V)	&View
+ 解除锁定	Unlock
+ 记录: %1 / %2	Record: %1 / %2
+ 记录索引无效	Record index is invalid
+ 记录索引超出数据源范围	Record index is out of range
+ 设置矩形圆角半径	Set rectangle corner radius
+ 该分类暂无模板	No templates in this category
+ 请先选择并配置 Excel 数据源	Please select and configure an Excel data source first
+ 请先选择文本元素。	Please select a text element first.
+ 请先选择条码或二维码元素。	Please select a barcode or QR code element first.
+ 请先配置 MySQL 数据源	Please configure the MySQL data source first
+ 请先配置数据源并点击“应用到当前元素”。	Please configure a data source and click "Apply to Current Element".
+ 请输入自定义分隔符	Please enter a custom separator
+ 请选择打印范围	Please choose a print range
+ 调整大小	Resize
+ 调整线条与竖直方向的夹角 (0-360°)	Adjust angle between the line and vertical (0-360°)
+ 调整表格结构	Adjust Table Structure
+ 起始偏移(第一页)	Starting Offset (page 1)
+ 起始列:	Starting Column:
+ 起始行	Starting Row
+ 起始行:	Starting Row:
+ 超市	Supermarket
+ 输入文本内容	Enter text content
+ 边框	Border
+ 边框宽度:	Border Width:
+ 边框颜色	Border Color
+ 边框颜色:	Border Color:
+ 连接成功	Connection successful
+ 退出(&X)	E&xit
+ 适应画布	Fit to Canvas
+ 选择	Select
+ 选择Excel文件	Choose Excel File
+ 选择图像文件	Choose Image File
+ 选择填充颜色	Choose Fill Color
+ 选择文本颜色	Choose Text Color
+ 选择的记录范围无效	Selected record range is invalid
+ 选择线条颜色	Choose Line Color
+ 选择背景颜色	Choose Background Color
+ 选择要导入的模板文件	Choose template files to import
+ 选择边框颜色	Choose Border Color
+ 选项:	Options:
+ 透明度:	Opacity:
+ 重做(&R)	&Redo
+ 重做	Redo
+ 重置	Reset
+ 锁定	Lock
+ 错误	Error
+ 页边距与间距	Margins & Spacing
+ 页面大小:	Page Size:
+ 顶点编辑	Vertex Editing
+ 预设尺寸:	Preset Size:
+A4 (210×297mm)	A4 (210×297 mm)
+A5 (148×210mm)	A5 (148×210 mm)
+Camera: 	Camera: 
+Format: \t %1 \nText: \t %2 \nType: \t %3 \nTime: \t %4 ms	Format: \t %1 \nText: \t %2 \nType: \t %3 \nTime: \t %4 ms
+Letter (216×279mm)	Letter (216×279 mm)
+−	−
+⊡	⊡
+中文	Chinese
+以下模板删除失败：\n%1	Failed to delete the following templates:\n%1
+份数: 1	Copies: 1
+分别导出	Export Separately
+前往	Go To
+原尺寸	Original Size
+合并导出	Export Combined
+导出/打印范围:	Export/Print Range:
+导出份数:	Copies to Export:
+导出作品	Export Designs
+导出方式:	Export Method:
+导出设置	Export Settings
+尺寸/纸张:	Size / Paper:
+尺寸: 40mm × 35mm	Size: 40 mm × 35 mm
+已分别导出 %1 个 PDF 文件至目录:\n%2	Exported %1 PDF files separately to:\n%2
+已导出 %1 个图像文件至目录:\n%2	Exported %1 image files to:\n%2
+已导出 %1 份到 %2 图像，保存于:\n%3	Exported %1 copies to %2 images stored at:\n%3
+已导出 %1 份到 PDF:\n%2	Exported %1 copies to PDF:\n%2
+已导出包含 %1 条记录的 PDF:\n%2	Exported PDF with %1 records to:\n%2
+打印作品	Print Designs
+撤销	Undo
+放大	Zoom In
+文件已保存到:\n%1	File saved to:\n%1
+文件类型:	File Type:
+文档已被修改。\n是否保存更改？	The document has been modified.\nDo you want to save your changes?
+是否继续迭代？	Continue iterating?
+无法写入文件 %1:\n%2.	Cannot write file %1:\n%2.
+无法加载语言 %1，对应 QM 文件缺失或未编译。请重新构建或重启应用。	Failed to load language %1; the corresponding QM file is missing or not compiled. Please rebuild or restart the application.
+无法读取文件 %1:\n%2.	Cannot read file %1:\n%2.
+确定要删除选中的 %1 个模板吗？此操作不可恢复。\n\n%2	Delete the selected %1 templates? This cannot be undone.\n\n%2
+缩小	Zoom Out
+自动排版	Auto Layout
+语言	Language
+语言切换	Language Switch
+语言已切换: %1	Language switched to: %1
+适应画布	Fit to Canvas
+重做	Redo
+页	Page
+ 高度:	Height:

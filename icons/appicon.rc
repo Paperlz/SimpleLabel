@@ -1,0 +1,5 @@
+// Application icon resource
+// 提示: 请确保同目录下存在 appicon.ico (多尺寸: 16,24,32,48,64,128,256)
+// 可由 app-icon.svg 通过图形工具或 ImageMagick 转换生成。
+
+IDI_APP_ICON ICON "appicon.ico"

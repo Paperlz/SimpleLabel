@@ -1,0 +1,14 @@
+# 进入项目根
+Set-Location D:\Projects\FOLabel
+
+# 设置 Qt 工具目录（按你实际环境选择其一）
+$QtBin = "D:\develop\qt\6.8.2\msvc2022_64\bin"
+
+# 生成/更新英文 ts（会扫描 src 中 tr("...")）
+& "$QtBin\lupdate.exe" -recursive src -ts translations\SimpleLabel_en_US.ts
+
+# 用 Qt Linguist 打开 ts 进行英文翻译（可选图形界面）
+# & "$QtBin\linguist.exe" translations\SimpleLabel_en_US.ts
+
+# 编译为 qm（程序运行时加载）
+& "$QtBin\lrelease.exe" translations\SimpleLabel_en_US.ts -qm translations\SimpleLabel_en_US.qm
