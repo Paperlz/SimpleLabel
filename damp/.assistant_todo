@@ -1,5 +1,0 @@
-TODO:
-~1. Inspect current layout export workflow and identify reusable components for PNG output.~
-~2. Implement image-based layout rendering that mirrors the PDF path.~
-~3. Integrate PNG layout export into the dialog flow with file saving and messaging.~
-~4. Test export paths (PDF/PNG/JPEG) to ensure regressions are avoided (build verified; runtime still pending manual check).~
